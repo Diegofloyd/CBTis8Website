@@ -20,12 +20,13 @@
 
                 <?php foreach($osito as $persona){
                 echo "<tr>";
-                echo "<td>".$persona['idPersona'];
+                echo "<td>".$persona['matricula'];
                 echo "<td>".$persona['nombre'];
-                echo "<td>".$persona['apellido'];
+                echo "<td>".$persona['apellidoPaterno'];
+                echo "<td>".$persona['apellidoMaterno'];
                 echo "<td>".$persona['correo'];
-                echo "<td>".$persona['telefono'];
-                echo "<td>".$persona['contrasenia'];
+                echo "<td>".$persona['Estatus'];
+                echo "<td>".$persona['Grupo'];
                 echo "</tr>";
                 }?>
                     </div>
