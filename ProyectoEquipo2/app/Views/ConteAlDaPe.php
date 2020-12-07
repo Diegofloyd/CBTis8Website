@@ -4,10 +4,30 @@
                 <div class="card" style="width:50%">
                     <img class="card-img-top" src="<?php echo base_url();?>/assets/images/alumno.jpeg" alt="Card image">
                     <div class="card-body">
-                        <h4 class="card-title">Alan Arturo Canales</h4>
-                        <p class="card-text">Matricula: 1931117589</p>
-                        <p class="card-text">Correo: alan.canales@micorreo.upp.edu.mx</p>
+                        
+                  <tr>
 
+                    <th>Matricula</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>email</th>
+                    <th>Estatus</th>
+                    <th>Grupo</th>
+
+
+                </tr>
+
+                <?php foreach($osito as $persona){
+                echo "<tr>";
+                echo "<td>".$persona['idPersona'];
+                echo "<td>".$persona['nombre'];
+                echo "<td>".$persona['apellido'];
+                echo "<td>".$persona['correo'];
+                echo "<td>".$persona['telefono'];
+                echo "<td>".$persona['contrasenia'];
+                echo "</tr>";
+                }?>
                     </div>
 
                 </div>

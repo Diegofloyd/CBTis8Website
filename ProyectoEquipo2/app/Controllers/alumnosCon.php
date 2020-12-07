@@ -14,7 +14,7 @@ class alumnosCon extends BaseController
 
     public function object()
     {
-        /*
+    /*
         $request=\Config\Services::request();
         $firstName=$request->getPost('first_name');
         $lastName=$request->getPost('last_name');
@@ -23,6 +23,7 @@ class alumnosCon extends BaseController
         $estatus=$request->getPost('estatus');
         $grupo=$request->getPost('grupo');
 */
+
         $data = [
             'nombre' => 'Diego',
             'apellidoPaterno' => 'López',
@@ -32,7 +33,7 @@ class alumnosCon extends BaseController
             'grupo' =>  '4B'
         ];
 
-        $variable = new usuarioModel($db);
+        $variable = new alumnoModel($db);
         $variable->insert($data);
 
         //return view('cabeceraForm').view('cuerpoForm').view('finForm');
