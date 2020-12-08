@@ -9,27 +9,28 @@
                         <img class="card-img-top" src="<?php echo base_url();?>/assets/images/img_avatar1.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Profesor: </h4>
-                            <p class="card-text">Carrera: Ingenieria en Software</p>
-                            <p class="card-text">Grupo: 2</p>
-
-                            <form action="/action_page.php">
+                            <form method="POST" action="/action_page.php" role="form" onsubmit="return seguridad();">
                                 <div class="form-group">
                                     <label for="usr">Nombre:</label>
+                                    <label for="usr" class="form-control" name="nombre">Alan</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Apellido Paterno:</label>
+                                    <label for="usr" class="form-control" name="apellido_paterno">Canales</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Apellido Materno:</label>
+                                    <label for="usr" class="form-control" name="apellido_materno">Barrera</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Correo:</label>
+                                    <label for="usr" class="form-control" name="email">alan@micorreo.upp.edu.mx</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Estatus:</label>
+                                    <label for="usr" class="form-control" name="estatus">True</label>
+                                </div>
 
-                                    <label for="usr" class="form-control">Diego Johan López Barrera</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Password:</label>
-                                    <label for="usr" class="form-control">Hola mundo</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Plaza:</label>
-                                    <label for="usr" class="form-control">Tiempo Completo</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Horas:</label>
-                                    <label for="usr" class="form-control">6 Horas</label>
-                                </div>
                             </form>
                         </div>
                     </div>

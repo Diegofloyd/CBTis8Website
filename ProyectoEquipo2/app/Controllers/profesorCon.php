@@ -7,30 +7,28 @@ class alumnosCon extends BaseController
 	public function index()
 	{
         //return view('cabeceraForm').view('cuerpoForm').view('finForm');
-        //return view('CabeceraAlumno').view('NavbarModAlumno').view('LNavAlumno').view('ConteAlDaPe').view('footer');
+        return view('CabeceraAlumno').view('NavbarModAlumno').view('LNavAlumno').view('ConteAlDaPe').view('footer');
 	}
 
 	//--------------------------------------------------------------------
 
     public function object()
     {
-    /*
+    
         $request=\Config\Services::request();
-        $firstName=$request->getPost('first_name');
-        $lastName=$request->getPost('last_name');
-        $lastName=$request->getPost('last_name');
+        $firstName=$request->getPost('nombre');
+        $lastName=$request->getPost('apellido_paterno');
+        $lastName=$request->getPost('apellido_materno');
         $email=$request->getPost('email');
         $estatus=$request->getPost('estatus');
-        $grupo=$request->getPost('grupo');
-*/
+
 
         $data = [
-            'nombre' => 'Diego',
-            'apellidoPaterno' => 'López',
+            'nombre' => 'Alan',
+            'apellidoPaterno' => 'Canales',
             'apellidoMaterno' => 'Barrera',
-            'correo'    => 'diego71@micorreo.upp.edu.mx',
-            'estatus' => 'true',
-            'grupo' =>  '4B'
+            'correo'    => 'alan@micorreo.upp.edu.mx',
+            'estatus' => 'true'
         ];
 
         $variable = new alumnoModel($db);

@@ -1,41 +1,46 @@
- <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Mi Perfil</h2>
-            <div id="Menu">
-                <div class="card" style="width:50%">
-                    <img class="card-img-top" src="<?php echo base_url();?>/assets/images/alumno.jpeg" alt="Card image">
-                    <div class="card-body">
-                        
-                  <tr>
 
-                    <th>Matricula</th>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>email</th>
-                    <th>Estatus</th>
-                    <th>Grupo</th>
-
-
-                </tr>
-
-                <?php foreach($osito as $persona){
-                echo "<tr>";
-                echo "<td>".$persona['matricula'];
-                echo "<td>".$persona['nombre'];
-                echo "<td>".$persona['apellidoPaterno'];
-                echo "<td>".$persona['apellidoMaterno'];
-                echo "<td>".$persona['correo'];
-                echo "<td>".$persona['Estatus'];
-                echo "<td>".$persona['Grupo'];
-                echo "</tr>";
-                }?>
+            <div id="content" class="container p-5 my-3 rounded-lg  w-100 mt-xl-5">
+                <h1>Datos Personales</h1>
+                <br>
+                <div class="container">
+                    <div class="card" style="width:400px">
+                        <img class="card-img-top" src="<?php echo base_url();?>/assets/images/alumno.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Alumno: </h4>
+                            <form method="POST" action="/action_page.php" role="form" onsubmit="return seguridad();">
+                                <div class="form-group">
+                                    <label for="usr">Nombre:</label>
+                                    <label for="usr" class="form-control" name="nombre">Diego</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Apellido Paterno:</label>
+                                    <label for="usr" class="form-control" name="apellido_paterno">López</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Apellido Materno:</label>
+                                    <label for="usr" class="form-control" name="apellido_materno">Barrera</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Correo:</label>
+                                    <label for="usr" class="form-control" name="email">diego71@micorreo.upp.edu.mx</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Estatus:</label>
+                                    <label for="usr" class="form-control" name="estatus">True</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Grupo:</label>
+                                    <label for="usr" class="form-control" name="estatus">4B</label>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-    </div>
+    </section>
 
 
+
+
+    
