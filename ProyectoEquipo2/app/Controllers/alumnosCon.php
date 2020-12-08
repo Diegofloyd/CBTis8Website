@@ -6,8 +6,8 @@ class alumnosCon extends BaseController
 {
 	public function index()
 	{
-        //return view('cabeceraForm').view('cuerpoForm').view('finForm');
-        //return view('CabeceraAlumno').view('NavbarModAlumno').view('LNavAlumno').view('ConteAlDaPe').view('footer');
+       
+        return view('CabeceraAlumno').view('NavbarModAlumno').view('LNavAlumno').view('ConteAlDaPe').view('footer');
 	}
 
 	//--------------------------------------------------------------------
@@ -36,8 +36,6 @@ class alumnosCon extends BaseController
         $variable = new alumnoModel($db);
         $variable->insert($data);
 
-        //return view('cabeceraForm').view('cuerpoForm').view('finForm');
-        $info["osito"]=$variable->findAll();
         return view("tablaView", $info);
     }
 }

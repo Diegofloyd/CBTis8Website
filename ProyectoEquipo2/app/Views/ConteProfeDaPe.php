@@ -9,32 +9,33 @@
                         <img class="card-img-top" src="<?php echo base_url();?>/assets/images/img_avatar1.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Profesor: </h4>
-                            <form method="POST" action="/action_page.php" role="form" onsubmit="return seguridad();">
-                                <div class="form-group">
-                                    <label for="usr">Nombre:</label>
-                                    <label for="usr" class="form-control" name="nombre">Alan</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Apellido Paterno:</label>
-                                    <label for="usr" class="form-control" name="apellido_paterno">Canales</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Apellido Materno:</label>
-                                    <label for="usr" class="form-control" name="apellido_materno">Barrera</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Correo:</label>
-                                    <label for="usr" class="form-control" name="email">alan@micorreo.upp.edu.mx</label>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pwd">Estatus:</label>
-                                    <label for="usr" class="form-control" name="estatus">True</label>
-                                </div>
 
-                            </form>
+                            <table border="1">
+                            <tr>
+                            <th>Matricula</th>
+                            <th>Nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>Correo</th>
+                            <th>Estatus</th>
+                            </tr>
+                            <?php foreach($osito as $alumno){
+                                echo "<tr>";
+                                echo "<td>".$alumno['matricula'];
+                                echo "<td>".$alumno['nombre'];
+                                echo "<td>".$alumno['apellidoPaterno'];
+                                echo "<td>".$alumno['apellidoMaterno'];
+                                echo "<td>".$alumno['correo'];
+                                echo "<td>".$alumno['estatus'];
+                                echo "</tr>";
+                            }?>
+                            </table>
+
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
+        
     </section>
+

@@ -10,7 +10,7 @@ class usuarioModel extends Model
     protected $returnType     = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['nombre', 'apellidoPaterno', 'apellidoMaterno', 'correo', 'estatus', 'grupo'];
+    protected $allowedFields = ['nombre', 'apellidoPaterno', 'apellidoMaterno', 'correo', 'grupo'];
 
     protected $useTimestamps = false;
     protected $createdField  = 'created_at';

@@ -1,5 +1,5 @@
 <?php namespace App\Controllers;
-
+USE App/Models/alumnoModel;
 class Home extends BaseController
 {
 	public function index()
@@ -81,7 +81,19 @@ class Home extends BaseController
 	}
     public function Alumno_DaPe()/*Pendiente**/
 	{
+		$data = [
+			'nombre' -> 'Alan',
+			'apellidoPaterno' -> 'Canales',
+			'apellidoMaterno' -> 'Barrera',
+			'correo'    -> 'alan@micorreo.upp.edu.mx',
+			'grupo' ->  '4B'
+		];
+
+		$variable = new alumnoModel($db);
+		$variable->insert($data);
+
 		return view('CabeceraAlumno').view('NavbarModAlumno').view('LNavAlumno').view('ConteAlDaPe').view('footer');
+
 	}
     public function Alumno_Calificacion()/*Pendiente**/
 	{
