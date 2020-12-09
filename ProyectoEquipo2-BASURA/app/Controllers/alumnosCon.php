@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-USE App/Models/usuarioModel;
+USE App\Models\alumnoModel;
 
 class alumnosCon extends BaseController
 {
@@ -35,7 +35,7 @@ class alumnosCon extends BaseController
 
         $variable = new alumnoModel($db);
         $variable->insert($data);
-
+        $info['osito']=$variable->findAll();
         return view("tablaView", $info);
     }
 }

@@ -2,7 +2,7 @@
 
 use CodeIgniter\Model;
 
-class usuarioModel extends Model
+class alumnoModel extends Model
 {
     protected $table      = 'alumno';
     protected $primaryKey = 'matricula';
